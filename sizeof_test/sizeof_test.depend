@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1616178713 source:c:\users\teyyub\workspace_c\c-tutorial\sizeof_test\main.c
+	<stdio.h>
+	<stdlib.h>
+
