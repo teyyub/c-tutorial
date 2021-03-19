@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1616180321 source:c:\users\teyyub\workspace_c\c-tutorial\c_output\main.c
+	<stdio.h>
+	<stdlib.h>
+
