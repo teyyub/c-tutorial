@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Teyyub/workspace_c/c-tutorial/linked_list_insert/main.c
+stdio.h
+-
+stdlib.h
+-
+conio.h
+-
+stdbool.h
+-
+

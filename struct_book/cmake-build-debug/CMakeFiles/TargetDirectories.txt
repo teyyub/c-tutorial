@@ -1,0 +1,3 @@
+C:/Users/Teyyub/workspace_c/c-tutorial/struct_book/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Teyyub/workspace_c/c-tutorial/struct_book/cmake-build-debug/CMakeFiles/struct_book.dir
+C:/Users/Teyyub/workspace_c/c-tutorial/struct_book/cmake-build-debug/CMakeFiles/rebuild_cache.dir

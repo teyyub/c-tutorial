@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/Teyyub/workspace_c/c-tutorial/struct_book/cmake-build-debug/CMakeFiles/struct_book.dir/embed.manifest"
