@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
  typedef struct Books {
-   char title[50];
+   char *title;
    char author[50];
    char subject[100];
    int book_id;
@@ -14,7 +14,7 @@ int main()
 {
         Book book,book1, book2;
 
-       strcpy( book.title, "C Programming");
+       strcpy( &book.title, "C Programming");
        strcpy( book.author, "Nuha Ali");
        strcpy( book.subject, "C Programming Tutorial");
        book.book_id = 6495407;

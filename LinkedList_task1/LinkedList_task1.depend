@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1616167955 source:c:\users\teyyub\documents\taskc++\linkedlist_task1\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
