@@ -8,7 +8,7 @@ typedef struct Books {
 }Book;
 int main()
 {
-       Book book,book1;
+       Book book,book1, book2;
 
        strcpy( book.title, "C Programming");
        strcpy( book.author, "Nuha Ali");
@@ -20,6 +20,12 @@ int main()
        strcpy( book1.subject, "Java Programming Tutorial");
        book1.book_id = 6495512;
 
+      //bele islemeyecek
+     //   book2.title= "Java Programming";
+     //   book2.author= "Teyyub Aliyev";
+     //   book2.subjec= "Java Programming Tutorial";
+     //   book2.book_id = 6495500
+
        printf( "Book title : %s\n", book.title);
        printf( "Book author : %s\n", book.author);
        printf( "Book subject : %s\n", book.subject);
@@ -29,5 +35,11 @@ int main()
        printf( "Book author : %s\n", book1.author);
        printf( "Book subject : %s\n", book1.subject);
        printf( "Book book_id : %d\n", book1.book_id);
+
+       printf("====================\n");
+//       printf( "Book title : %s\n", book2.title);
+//       printf( "Book author : %s\n", book2.author);
+//       printf( "Book subject : %s\n", book2.subject);
+//       printf( "Book book_id : %d\n", book2.book_id);
     return 0;
 }
