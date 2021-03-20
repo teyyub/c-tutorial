@@ -3,41 +3,25 @@
 #include <conio.h>
 #include <stdbool.h>
 /* Node Stucture */
-typedef struct node_t {
+typedef struct Movie {
 //    int data;
 //    char *name;
     int id;
     char* title;
     char* director;
     int year;
-    struct node_t *next;
+    struct Movie *next;
 } ;//Node ;
 
 struct node *head = NULL;
-struct node *current = NULL;
+//struct node *current = NULL;
 
 /* Function Declarations */
 int update(int id, const char* title, const char* director);
 void sort();
-//Node * insert_top(int, char*, char*, int,  Node *);
-
-/* Add a new node to the top of a list */
-//Node * insert_top(int id, char *title, char*director, int year ,Node *head) {
-//    Node *new_node;
-//    new_node = (Node *) malloc(sizeof(Node));
-//    new_node->id = id;
-//    new_node->title=title;
-//    new_node->director=director;
-//    new_node->year=year;
-//    new_node->next= head;
-//    head = new_node;
-//    return head;
-//}
-struct node_t * insert_top(int, char*, char*, int);
-
-struct node_t * insert_top(int id, char *title, char*director, int year ) {
-    struct node_t *new_node;
-    new_node = (struct node_t *) malloc(sizeof(struct node_t));
+struct Movie * insert_top(int id, char *title, char*director, int year ) {
+    struct Movie *new_node;
+    new_node = (struct Movie *) malloc(sizeof(struct Movie));
     new_node->id = id;
     new_node->title=title;
     new_node->director=director;
@@ -50,14 +34,13 @@ int update(int id, const char* title, const char* director){
 
     int count = 0;
     int return_year;
-    struct node_t *temp;
+    struct Movie *temp;
     temp = head;
     bool found = false;
     while(temp != NULL) // Start traversing from head node
     {
         if(temp -> id == id)
         {
-
             found = true;
             break;
         }
@@ -68,7 +51,6 @@ int update(int id, const char* title, const char* director){
 
         }}
     if(found) {
-        printf("\nElement found at position %d\n",count);
         if(temp->title!=title){
             temp->title = title;
             temp->director=director;
@@ -77,27 +59,13 @@ int update(int id, const char* title, const char* director){
         }
     } else {
         insert_top(id, title,director,0 );
-
     }
 
  return 0;
 }
 
-/* Print all the elements in the linked list */
-//void print(Node *head) {
-//    Node *current_node = head;
-//    while ( current_node != NULL) {
-//        printf("%d ", current_node->id);
-//        printf("%s ", current_node->title);
-//        printf("%s ", current_node->director);
-//        printf("%d ", current_node->year);
-//        current_node = current_node->next;
-//        printf("\n");
-//    }
-//}
-
 void print() {
-    struct node_t *current_node = head;
+    struct Movie *current_node = head;
     while ( current_node != NULL) {
         printf("%d ", current_node->id);
         printf("%s ", current_node->title);
@@ -109,28 +77,23 @@ void print() {
 }
 
 int main() {
-//    Node *head = NULL;
-//    head = insert_top(5, "kinozavr","puskin",2000 ,head);
-//    head = insert_top(51, "kinozavr1","puskin1",2001 ,head);
 
-//    struct node_t *head = NULL;
-      insert_top(5, "kinozavr","puskin",2000 );
-      insert_top(51, "kinozavr1","puskin1",2051 );
-      insert_top(15, "kinozavr15","puskin15",2015 );
-      insert_top(155, "kinozavr155","puskin155",2115 );
+    insert_top(5, "kinozavr","puskin",2000 );
+    insert_top(51, "kinozavr1","puskin1",2051 );
+    insert_top(15, "kinozavr15","puskin15",2015 );
+    insert_top(155, "kinozavr155","puskin155",2115 );
     update(519, "kinozavr11","puskin11");
     update(519, "kinozavr519","puskin11");
     print();
     printf("after sorted\n");
     sort();
     print();
-
     return 0;
 }
 void sort(){
-    struct node_t *t;
-    struct node_t *s;
-    struct node_t *temp;
+    struct Movie *t;
+    struct Movie *s;
+    struct Movie *temp;
     t=head;
     int x, year;
     char *title,*director;
