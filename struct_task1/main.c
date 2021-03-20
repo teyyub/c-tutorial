@@ -9,7 +9,7 @@
 
 /* function declaration */
 void printBook(  Book book );
-
+void printBookPnt(  Book *book );
 int main()
 {
         Book book,book1, book2;
@@ -45,6 +45,9 @@ int main()
        printBook(book);
        printBook(book1);
 
+       printf("====================\n");
+       printBookPnt(&book);
+       printBookPnt(&book1);
 
 //       printf( "Book title : %s\n", book2.title);
 //       printf( "Book author : %s\n", book2.author);
@@ -58,4 +61,11 @@ void printBook(Book book){
        printf( "Book author : %s\n", book.author);
        printf( "Book subject : %s\n", book.subject);
        printf( "Book book_id : %d\n", book.book_id);
+}
+void printBookPnt(  Book *book ){
+   printf( "Book title : %s\n", book->title);
+   printf( "Book author : %s\n", book->author);
+   printf( "Book subject : %s\n", book->subject);
+   printf( "Book book_id : %d\n", book->book_id);
+
 }
